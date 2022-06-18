@@ -1,10 +1,11 @@
 <script>
 	import * as esbuild from 'esbuild-wasm';
-
 	import { onMount } from 'svelte';
+    import {browser} from
 	let output;
 	let input;
 
+	
 	onMount(async () => {
 		// esbuild
 		// 	.initialize({
@@ -22,10 +23,11 @@
 		// 			console.log(result);
 		// 		});
 		// 	});
+        if
 		esbuild.initialize({
 			wasmURL: './node_modules/esbuild-wasm/esbuild.wasm',
-			// worker: true,
-			worker: false
+			worker: true
+			// worker: false
 
 			// wasmURL: './node_modules/esbuild-wasm/esbuild.wasm'
 		});

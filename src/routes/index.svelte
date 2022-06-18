@@ -5,6 +5,7 @@
 	let output;
 	let input;
 
+
 	onMount(async () => {
 		// esbuild
 		// 	.initialize({
@@ -23,7 +24,7 @@
 		// 		});
 		// 	});
 		esbuild.initialize({
-			wasmURL: './node_modules/esbuild-wasm/esbuild.wasm',
+			wasmURL: './esbuild.wasm',
 			// worker: true,
 			worker: false
 
