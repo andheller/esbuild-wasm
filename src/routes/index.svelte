@@ -44,7 +44,7 @@
 			});
 	};
 	const compiler = () => {
-		output = compile(input);
+		//		output = compile(input);
 	};
 </script>
 
@@ -53,5 +53,5 @@
 <textarea bind:value={input} />
 
 <button on:click={transform}>Submit</button>
-<button on:click={compiler}>Compile</button>
+<!-- <button on:click={compiler}>Compile</button> -->
 <pre>{JSON.stringify(output)}</pre>
