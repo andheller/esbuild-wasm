@@ -23,6 +23,6 @@
 	"dependencies": {
 		"esbuild-wasm": "^0.14.45",
 		"workbox-sw": "^6.5.3",
-		"svelte": "^3.44.0"
+		"svelte": "^3.48.0"
 	}
 }
