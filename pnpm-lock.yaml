@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@sveltejs/adapter-auto': next
   '@sveltejs/kit': next
+  esbuild-svelte: ^0.7.1
   esbuild-wasm: ^0.14.45
   eslint: ^8.16.0
   eslint-config-prettier: ^8.3.0
@@ -13,7 +14,9 @@ specifiers:
   workbox-sw: ^6.5.3
 
 dependencies:
+  esbuild-svelte: 0.7.1_svelte@3.48.0
   esbuild-wasm: 0.14.45
+  svelte: 3.48.0
   workbox-sw: 6.5.3
 
 devDependencies:
@@ -24,7 +27,6 @@ devDependencies:
   eslint-plugin-svelte3: 4.0.0_wy4erphnvhealet26qderqv6bu
   prettier: 2.7.1
   prettier-plugin-svelte: 2.7.0_nakrehnrzdf7fdea5k3a4dfy4m
-  svelte: 3.48.0
 
 packages:
 
@@ -601,6 +603,16 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /esbuild-svelte/0.7.1_svelte@3.48.0:
+    resolution: {integrity: sha512-83vRAJ2OmoKxmK+rLFZVmyv5bJ8ahsYQwJ2RGmNAlHBIHq4ENUwA/hiwA2+AohrWD1BgZnGPMj8DL3l0I0xkug==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      esbuild: '>=0.9.6'
+      svelte: '>=3.43.0'
+    dependencies:
+      svelte: 3.48.0
+    dev: false
 
   /esbuild-wasm/0.14.45:
     resolution: {integrity: sha512-tc4ui9T922+41QP5iiEi+tXdRcHIIa61/Itoo3N2q8cOmVFkiUoWjSDcFF81Q2E4oKDWJ2LtLtJg6wVrTac+1Q==}
@@ -1675,7 +1687,6 @@ packages:
   /svelte/3.48.0:
     resolution: {integrity: sha512-fN2YRm/bGumvjUpu6yI3BpvZnpIm9I6A7HR4oUNYd7ggYyIwSA/BX7DJ+UXXffLp6XNcUijyLvttbPVCYa/3xQ==}
     engines: {node: '>= 8'}
-    dev: true
 
   /tar/4.4.19:
     resolution: {integrity: sha512-a20gEsvHnWe0ygBY8JbxoM4w3SJdhc7ZAuxkLqh+nvNQN2IOt0B5lLgM490X5Hl8FF0dl0tOf2ewFYAlIFgzVA==}

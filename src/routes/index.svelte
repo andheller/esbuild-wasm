@@ -1,10 +1,11 @@
 <script>
 	import * as esbuild from 'esbuild-wasm';
+	import { compile } from 'svelte/compiler';
 
 	import { onMount } from 'svelte';
-	let output;
-	let input;
 
+	let output;
+	let input = `\<script\>let test = 'hello world'\<\/script\>`;
 
 	onMount(async () => {
 		// esbuild
@@ -34,13 +35,16 @@
 
 	const transform = () => {
 		esbuild
-			.transform(input, {
-				loader: 'jsx',
-				target: 'es2015'
+			.build(input, {
+				loader: 'js',
+				target: 'esnext'
 			})
 			.then((result) => {
 				output = result.code;
 			});
+	};
+	const compiler = () => {
+		output = compile(input);
 	};
 </script>
 
@@ -49,4 +53,5 @@
 <textarea bind:value={input} />
 
 <button on:click={transform}>Submit</button>
-<pre>{output}</pre>
+<button on:click={compiler}>Compile</button>
+<pre>{JSON.stringify(output)}</pre>
