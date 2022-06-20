@@ -17,6 +17,7 @@ var __spreadValues = (a, b2) => {
   return a;
 };
 var __spreadProps = (a, b2) => __defProps(a, __getOwnPropDescs(b2));
+import "url-shim";
 const now = typeof process !== "undefined" && process.hrtime ? () => {
   const t = process.hrtime();
   return t[0] * 1e3 + t[1] / 1e6;

@@ -1,12 +1,10 @@
 <script>
-	import { svelte_compile } from './compile.js';
-
 	let input;
 	let output;
 
 	function compile() {
 		console.log('test');
-		output = svelte_compile(input);
+		//output = svelte_compile(input);
 		console.log('end test');
 	}
 </script>

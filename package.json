@@ -11,7 +11,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-cloudflare": "next",
+		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
@@ -22,7 +22,8 @@
 	"type": "module",
 	"dependencies": {
 		"esbuild-wasm": "^0.14.45",
-		"workbox-sw": "^6.5.3",
-		"svelte": "^3.48.0"
+		"svelte": "^3.48.0",
+		"url-shim": "^1.0.1",
+		"workbox-sw": "^6.5.3"
 	}
 }
