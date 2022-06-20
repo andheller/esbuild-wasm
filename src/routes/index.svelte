@@ -1,5 +1,5 @@
 <script>
-	let input;
+	let input = 'test';
 	let output;
 	import { svelte_compile } from './svelte-compile';
 
@@ -8,6 +8,7 @@
 		output = svelte_compile(input);
 		console.log('end test');
 	}
+	compile();
 </script>
 
 <textarea bind:value={input} />
